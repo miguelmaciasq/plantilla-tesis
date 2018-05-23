@@ -1,0 +1,77 @@
+\chapter{Introducción}
+\label{cap:introduccion}
+
+% ------------------------------------------------------------------------- %%
+\section{Definición del Problema}
+\label{sec:ideacentral}
+En la ciudad de Pisco existen una cantidad significativa de acuicultores, siendo regulados por la Ley General de Pesca del estado peruano, que cultivan moluscos en determinadas áreas aptas para el crecimiento de conchas de abanico. Estos acuicultores luego de cosechar los moluscos de conchas de abanico ofrecen sus productos a las empresas locales que se encargan de su exportación. Para ello, los acuicultores dejan las conchas de abanico agrupadas en manojos de donde posteriormente la empresa local extrae los moluscos de las valvas para poderlos pesar y calcular el pago respectivo a cada acuicultor. Para el calculo de estos pagos las empresas locales clasifican a los moluscos en grados de calidad que dependen del peso grupal de los moluscos. Este proceso de clasificación de conchas de abanico es llamado Codificación que es una tarea realizada por las personas ``Codificadoras'', quienes basadas en su experiencia designan a cada molusco un determinado código de acuerdo al tamaño y a los intereses de la entidad para la que trabajan, sea entidad proveedora (en ocasiones los acuicultores delegan algunas codificadoras para este proceso que defiendan sus intereses) o compradora (empresa local), en el caso que sea de la entidad proveedora, tratarán que el código sea de mayor precio posible, como ejemplo de ello podemos tener según el Cuadro \ref{tab:tabCodigoMolusco} que un molusco que pese 22.7 gr. puede ser catalogado como código 20/30, en el caso que la ``Codificadora'' sea de la entidad compradora, de lo contrario será catalogado 10/20. Actualmente se trata de equilibrar los intereses poniendo ``Codificadoras'' de ambas entidades para poder codificar de una manera equilibrada y/o balanceada. Cabe mencionar que el código de mayor precio es el 10/20 y el de menor precio, el 60/80. Adicionalmente la globalización busca en las empresas exportadoras que sus productos alimenticios cumplan exigentes estándares de clasificación para que puedan ingresar al determinado mercado. En el Perú la producción de Conchas de Abanico constituye un mercado de exportación con una tendencia creciente \cite{cit:SUNAT}, debiendo de cumplir con estándares de clasificación de calidad relacionados a condiciones  físicas (Peso) del molusco. 
+
+\begin{table}[H]
+\centering \caption{\label{tab:tabCodigoMolusco} Códigos de exportación de moluscos Conchas de Abanico}
+\begin{center}
+\scalebox{0.7}{
+	\begin{tabular}{|l|cc|cc|} 
+	\hline
+	\textbf{Código} & \multicolumn{2}{|c|}{\textbf{Unidades/Libra}} & \multicolumn{2}{c|}{\textbf{Peso (gr.)}} \\ 	
+	& Min & Max & Min & Max \\  \hline
+	10/20 & -- & 20 & 22.7 & Más \\ 
+	20/30 & 21 & 30 & 15.1 & 22.6 \\ 
+	30/40 & 31 & 40 & 11.4 & 15 \\  
+	40/60 & 41 & 60 &  7.6 & 11.3 \\  
+	60/80 & 61 & 80 &  5.7 & 7.5 \\  \hline
+	\end{tabular}}
+	\\ \scriptsize Fuente: FAO
+	\end{center}
+\end{table}
+
+
+
+\subsection{Variable dependiente e independiente}
+La variable independiente en esta investigación la cual puede ser controlada por el autor es \textbf{la Función de Pertenencia Dinámica} la cual nos permitirá influir sobre los resultados de clasificación de cada molusco, en este sentido la variable dependiente sería \textbf{el Código de Clasificación de calidad} asignado a cada molusco procesado. 
+
+
+\subsection{Indicadores de validez}
+El método a utilizar para indicar la validez del presente trabajo son los \textbf{Códigos de Clasificación} proporcionados por la FAO, los cuales serán explicados en detalle en la sección \ref{sec:codigos}.
+
+%% ------------------------------------------------------------------------- %%
+\section{Objetivos}
+\label{sec:objetivo}
+
+\subsection{Objetivo general}
+Determinar los códigos de clasificación para moluscos de una manera automatizada utilizando herramientas de bajo costo como balanzas de bajo costo.
+\subsection{Objetivos Primarios}
+Para lograr un proceso de estimación de distancia robusto de acuerdo a la propuesta, es necesario que se logren 
+resolver los siguientes problemas: 
+\begin{enumerate}
+	\item item 1
+	\item item 2
+	\item item 3
+	\item item 4
+\end{enumerate}
+
+\subsection{Objetivos Secundarios}
+Descripción de los objetivos secundarios del trabajo de fin de curso.
+\subsection{Demostración y validación del modelo}
+Se describe los pasos necesarios para validar el proyecto de fin de curso,así como de las técnicas utilizadas
+para lograr tal objetivo.
+
+
+%% ------------------------------------------------------------------------- %%
+\section{Contribuciones}
+\label{sec:contribuciones}
+Las principales contribuciones de este trabajo se listan como sigue:
+\begin{itemize}
+  \item item 1
+  \item item 2\ldots
+ \end{itemize}
+
+%% ------------------------------------------------------------------------- %%
+\section{Organización del trabajo}
+El presente trabajo de tesis está organizado de la siguiente manera: \\
+En el Capítulo~\ref{cap:conceptosprevios} se brinda un marco teórico fundamental e introductorio 
+sobre visión computacional, tratamiento de colores en imágenes, rango en imágenes, geometría
+proyectiva  y fotogrametría además de presentar los trabajos previos recopilados hasta la actualidad, 
+luego en el Capítulo~\ref{cap:calibracion} se explica el modelo 
+de cámara Pinhole \index{Pinhole}, el cual es fundamental para el proceso de calibración de cámara y se describen los métodos 
+estándares actuales para dicho proceso, también se describe los tipos de distorsiones 
+que presentan las lentes de los dispositivos de captura de luz, luego en el Capítulo~\ref{cap:deteccion}  se describe \ldots

@@ -1,0 +1,299 @@
+% Arquivo LaTeX de exemplo de dissertação/tese a ser apresentados à CPG do IME-USP
+% 
+% Versão 3: Sat Feb 13 15:02:20 BRST 2010
+%
+% Criação: Jesús P. Mena-Chalco
+% Revisão: Fabio Kon e Paulo Feofiloff
+%  
+% Obs: Leia previamente o texto do arquivo README.txt
+
+% Adicionalmente este formato ha sido modificado para su uso en la presentacion
+% de trabajos de fin de curso en la carrera de Ingenieria de sistemas y Ciencias de la 
+% computacion en la Universidad Nacional de San Agustin
+% Revision : Christian E. Portugal Zambrano
+% Version 1: Viernes 11 de Noviembre de 2011
+
+\documentclass[12pt,oneside,a4paper]{book}
+
+% ---------------------------------------------------------------------------- %
+% Paquetes 
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+%\usepackage[latin1]{inputenc}  % uso de la codificación ISO
+\usepackage[utf8x]{inputenc}   % uso de la codificación en  UTF-8
+\usepackage[pdftex]{graphicx}           % usamos archivos pdf/png como figuras
+\usepackage{setspace}                   % espaciamiento flexible
+\usepackage{indentfirst}                % identación del primer párrafo
+\usepackage{makeidx}                    % índice remissivo
+\usepackage[nottoc]{tocbibind}          % incrementamos la bibliografia/indice/contenido en la tabla de contenidos
+%\usepackage{courier}                    % usa o Adobe Courier en lugar de Computer Modern Typewriter
+\usepackage{type1cm}                    % fontes realmente escaláveis
+\usepackage{listings}                   % para formatear codigo fuente Ej: c++ (Ver el paquete listings)
+\usepackage{titletoc}
+\usepackage{subfigure} 
+\usepackage{multicol}
+\usepackage{sidecap} 			%para figuras con el caption a un costado
+\usepackage{wrapfig}			 %para imágenes envueltas con texto
+\usepackage{rotating}
+%\usepackage[bf,small,compact]{titlesec} % cabeceras de los títulos más pequeñas y compactas
+\usepackage[fixlanguage]{babelbib}
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage[usenames,svgnames,dvipsnames]{xcolor}
+\usepackage[a4paper,top=3.5cm,bottom=3.5cm,left=2.5cm,right=2.04cm]{geometry} % margenes
+%\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=black,linkcolor=black,urlcolor=black,filecolor=black,bookmarksopen=true]{hyperref} % links en color negro
+\usepackage[pdftex,plainpages=false,pdfpagelabels,pagebackref,colorlinks=true,citecolor=DarkGreen,linkcolor=black,urlcolor=DarkRed,filecolor=green]{hyperref} % links coloridos
+%\usepackage[all]{hypcap}                % soluciona el problema con hyperref y capitulos
+\usepackage{algorithm} %otros estilos son boxed y plain , depende del gusto
+\usepackage{algorithmic}
+\usepackage{amsmath} % modo de para agregar funciones matemáticas
+% ---------------------------------------------------------------------------- %
+% Cabeceras similares a el TAOCP de Donald E. Knuth
+\usepackage{fancyhdr}
+%Para títulos de capítulos personalizados
+%\usepackage[Sonny]{fncychap}
+%\usepackage[Lenny]{fncychap}
+%\usepackage[Glenn]{fncychap}
+%\usepackage[Conny]{fncychap}
+%\usepackage[Rejne]{fncychap}
+%\usepackage[Bjarne]{fncychap}
+%\usepackage[Bjornstrup]{fncychap}
+%\pagestyle{fancy}
+%\fancyhf{}
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+%\renewcommand{\sectionmark}[1]{\markright{\MakeUppercase{#1}}{}}
+%\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{pdfpages} %para agregar PDF externos en el documento actual
+
+%Personalización  del paquete hyperref
+\hypersetup{
+    bookmarksopen=false,         %mostrar bookmarks bar?
+    unicode=false,          % aceptar caracteres no latinos en Acrobat’s bookmarks
+    pdftoolbar=false,        % mostrar Acrobat’s toolbar?
+    pdfmenubar=false,        % mostrar Acrobat’s menu?
+    pdffitwindow=false,     % ajustar ancho de ventana de página cuando sea abierta
+    pdfstartview={FitH},    % ajustar ancho de página cuando sea abierta
+    pdftitle={Título del trabajo de fin de curso},    % título
+    pdfauthor={Autor del trabajo},     % autor
+    pdfsubject={Tesis para optar el Título de Ingeniero},   % motivo del documento
+    pdfcreator={Ej. Kile 2.0.86},   % creator of the document
+    pdfproducer={Ej. LaTex}, % producer of the document
+    pdfkeywords={Redes Neuronales;} {Conchas de Abanico;} {Lógica Difusa;} {Funciones de Pertenencia;},% lista de las palabras claves (Muy importante!!!)
+    pdfnewwindow=true,      % links en una nueva ventana
+}
+
+% ----------------TEOREMAS--------------------------------------------------- %
+\usepackage{theorem}
+%\setlength{\theorempreskipamount}{1mm}
+%\setlength{\theorempostskipamount}{1mm}
+%Estilos --
+%\theoremstyle{plain}
+%\theoremstyle{break}
+%\theoremstyle{margin}
+%\theoremstyle{marginbreak}
+%Tipo de letra--
+%\rmfamily, \sffamily, \ttfamily, \mdfamily, \bfseries, \upshape, \itshape, \slshape, \scshape, \normalfont
+\theorembodyfont{\sffamily}
+%\theoremheaderfont{\bfseries \large}
+%TEOREMAS
+\newtheorem{definicion}{Definición}
+\newtheorem{proposicion}{Proposición}
+\input spanishAlgorithmic % mi archivo de traducción
+%Para el ambiente itemize
+\renewcommand{\labelitemi}{$\bullet$}
+
+
+% ---------------------------------------------------------------------------- %
+\graphicspath{{./figuras/}}             % ruta de las figuras (recomendable)
+\frenchspacing                          % arruma o espaço: id est (i.e.) e exempli gratia (e.g.) 
+\urlstyle{same}                         % URL con el mismo estilo del texto y no mono-spaced
+\makeindex                              % para o índice remisivo
+\raggedbottom                           % para no permitir espacios extra en el texto
+\fontsize{60}{62}\usefont{OT1}{cmr}{m}{n}{\selectfont}
+\cleardoublepage
+\normalsize
+
+
+% ---------------------------------------------------------------------------- %
+% Cuerpo del documento
+\begin{document}
+\frontmatter 
+% cabecera para las páginas de las secciones anteriores del capítulo
+%\fancyhead[RO]{{\footnotesize\rightmark}\hspace{2em}\thepage}
+%\setcounter{tocdepth}{2}
+%\fancyhead[LE]{\thepage\hspace{2em}\footnotesize{\leftmark}}
+%\fancyhead[RE,LO]{}
+%\fancyhead[RO]{{\footnotesize\rightmark}\hspace{2em}\thepage}
+
+\onehalfspacing  % espaciamiento
+
+\thispagestyle{empty}
+\begin{center}
+  
+\rule{\textwidth}{8pt} \\
+\Large{\textbf{UNIVERSIDAD NACIONAL DE SAN AGUSTÍN}} \\
+\large{\textbf{FACULTAD DE INGENIERÍA DE PRODUCCIÓN Y SERVICIOS}} \\
+\large{\textbf{ESCUELA PROFESIONAL DE INGENIERÍA DE SISTEMAS}}\\~\\~\\
+  
+    \includegraphics[width=0.3\textwidth]{esc_color.pdf} \\
+    \vspace*{1.6cm}
+     \textbf{\Large{Modelo de Sistema Experto Neuro-difuso para la Codificación de Conchas de Abanico}}\\
+     \vspace*{1.2cm}
+     \Large{Tesis presentada por el Bachiller:\\}
+     \Large{\textbf{Roy Helbert Pepo Pérez Pinto}}
+%    
+     \vskip 1cm
+     \Large{Para optar el Título Profesional de:}\\
+     \LARGE{\textbf{INGENIERO DE SISTEMAS}}
+    \vskip 1cm
+%    % Programa: Nombre del Programa\\
+%      Orientador:  Phd. Jesús P. Mena Chalco\\
+%     %Coorientador: Prof. Dr. Nome do Coorientador
+% 
+   \vskip 0.5cm
+%     %\normalsize{Durante el desarrollo de este trabajo el autor recibió el apoyo de
+%     %...
+    
+    \vskip 0.3cm
+    \normalsize{Arequipa, Marzo del 2012}
+\end{center}
+
+% ---------------------------------------------------------------------------- %
+% Página de presentación (sólo para la versión final)
+\newpage
+\thispagestyle{empty}
+    \begin{center}
+        \vspace*{2.3 cm}
+        \textbf{\Large{Modelo de Sistema Experto Neuro-difuso para la Codificación de Conchas de Abanico}}\\
+        \vspace*{2 cm}
+    \end{center}
+
+    \vskip 2cm
+
+    \begin{flushright}
+    % Este exemplar corresponde à redação\\
+    % final da dissertação/tese devidamente corrigida\\
+    % e defendida por (Nome Completo do Aluno)\\
+    % e aprovada pela Comissão Julgadora.
+    %
+% 	Esta versão definitiva da tese/dissertação\\
+% 	contém as correções e alterações sugeridas pela\\
+% 	Comissão Julgadora durante a defesa realizada\\
+%     por (Nome Completo do Aluno) em 4/5/2010.
+          Esta versión definitiva de tesis\\
+          contiene las correcciones y alteraciones sugeridas por la \\
+          comisión del jurado durante la defensa realizada\\
+          por \textit{Roy Helbert Pepo Pérez Pinto}
+    \vskip 2cm
+
+    \end{flushright}
+    \vskip 4.2cm
+
+    \begin{quote}
+    \noindent Comisión del jurado:
+    
+    \begin{itemize}
+		\item Prof. Presidente del jurado  - EPIS - UNSA 
+		\item Prof. 2do Miembro del Jurado - EPIS - UNSA  
+		\item Prof. 3er Miembro del Jurado - EPIS - UNSA  
+    \end{itemize}
+      
+    \end{quote}
+\pagebreak
+
+\pagenumbering{roman}     % comenzamos a enumerar
+
+% ---------------------------------------------------------------------------- %
+% Agradecimientos
+\chapter*{Agradecimientos}
+A Dios por todo lo que me ha dado, a mi padre por su compañía en momentos tan difíciles, a mi madre una luchadora de corazón, a mis hermanas por su apoyo y comprensión. A mis abuelos, que pusieron su granito de arena en este camino, que Dios los tenga en su gloria. Y en general a todos mis seres queridos por su constante apoyo durante toda mi vida, a mis amigos por su confianza en mí, a pesar que a veces hice lo posible para que la pierdan, y a todos los profesores por sus enseñanzas.
+  \begin{quotation}
+\textbf{Para empezar un gran proyecto, hace falta valentía. Para terminar un gran proyecto, hace falta perseverancia} 
+\end{quotation}
+
+
+
+% ---------------------------------------------------------------------------- %
+% Resumen
+\chapter*{Resumen}
+Hoy en día la globalización afecta a todos los países sin importar que sean del primer, segundo mundo o tercer mundo. Esto quiere decir que un producto para que pueda ingresar en el mercado a nivel internacional deberá haber vencido las altas barreras de la globalización. En este sentido cualquier producto alimenticio que quiera ingresar al mercado internacional deberá afrontar los estándares de calidad y producción que este exige, es aquí que los países tercermundistas, como el Perú, tienen serías dificultades para cumplirlos más aun cuando se tiene en frente a países que tienen sus procesos automatizados que no les asegura cumplir con estos estándares pero si se los facilita. En el Perú existen un sin número de productos que buscan su inserción en el mercado internacional entre ellos tenemos a la concha de abanico la cual tiene alta demanda en Francia, Canadá y los Estados Unidos. Gracias a ello en Pisco, una de las principales ciudades exportadoras en el Perú de la concha de abanico, surge la necesidad de automatizar los procesos de producción de conchas de abanico para poder insertar su producto en el mercado internacional, en este sentido entre uno de estos procesos tenemos a la codificación de Conchas de Abanico el cual posee algunas singularidades, resaltando entre ellas el alto grado de subjetividad al momento de designar a un molusco con un grado de calidad (Código), en ocasiones se designa con un código de menor precio a moluscos que tienen probabilidades de ser clasificados con un código de mayor precio y viceversa, ocasionando de este modo pérdidas para alguna de las partes. En este trabajo, se presenta un Modelo de Sistema Experto Neurodifuso, como alternativa para la codificación de Conchas de Abanico, que permita obtener el código de clasificación correspondiente - establecido por la FAO (Food and Agriculture Organization of the United Nations) - al molusco, a partir de su peso en gramos. Adicionalmente este modelo da la opción de modificar manualmente las reglas del proceso de codificación, con el fin de realizar una codificación balanceada del producto. \\
+\noindent \textbf{Palabras clave:} Lógica Difusa, Sistemas Expertos, Funciones de Pertenencia, Conchas de Abanico.
+
+% ---------------------------------------------------------------------------- %
+% Abstract
+% \chapter*{Abstract}
+% abstract at english
+% 
+% \noindent \textbf{Keywords:} keyword1, keyword2, keyword3.
+  
+% ---------------------------------------------------------------------------- %
+% Sumário
+\tableofcontents    % imprime el resumen
+
+% ---------------------------------------------------------------------------- %
+\chapter{Lista de Abreviaturas}
+\begin{tabular}{ll}
+         FAO     & Organización para la Agricultura y Alimentación\\
+         & (\emph{Food and Agriculture Organization of the United Nations})\\
+         FAM    & Memoria Asociativa Difusa (\emph{Fuzzy Associative Memory})\\
+         IDE 	 & Entorno de Desarrollo Integrado  (\emph{Integrated Development Environment}) \\
+\end{tabular}
+
+% ---------------------------------------------------------------------------- %
+\chapter{Lista de Símbolos}
+\begin{tabular}{ll}
+         $pfc$   & Total de píxeles hacia el centro (\emph{Pixel From Center})\\
+         $rpc $  & Total de radianes por píxel (\emph{Radian Per Pixel Pitch})\\
+         $ro$    & Error por Radian (\emph{Radian offset})\\
+\end{tabular}
+
+% ---------------------------------------------------------------------------- %
+% Listas de figuras y tablas, estas son creadas automáticamente
+\listoffigures            
+\listoftables            
+
+% ---------------------------------------------------------------------------- %
+% Capítulos del trabajo
+\mainmatter
+
+% cabeceras para las páginas de todos los capítulos
+%\fancyhead[RE,LO]{\thesection}
+
+%\singlespacing              % espaciamiento simple
+\onehalfspacing            % espaciamiento un y medio
+%Aqui podemos incluir mas capítulos o secciones en diferentes archivos
+%esto para facilitar la lectura del trabajo
+\include{Introduccion}      % asociado al archivo: 'introduccion.tex'
+\include{ConchasAbanico}
+\include{ConceptosPrevios}       
+\include{SistemaExperto}
+\include{Analisis}
+\include{Conclusiones}
+
+
+% cabeceras para los apéndices
+%\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\appendixname\ \thechapter}} {\MakeUppercase{#1}} }
+%\fancyhead[RE,LO]{}
+% ---------------------------------------------------------------------------- %
+
+\appendix
+\include{apendiceC}
+\include{apendiceE}
+\include{apendiceD}
+
+
+% Índice remissivo
+\printindex   % imprime el índice alfabético en el documento
+
+% ---------------------------------------------------------------------------- %
+% Bibliografia
+\backmatter \singlespacing   % espaciamientos simples
+\nocite{*}
+\bibliographystyle{apalike}% modo de citación bibliográfica
+\bibliography{biblioTesisFinal}   %asociado al archivo 'biblioTesisFinal.bib'
+
+
+
+
+
+\end{document}
